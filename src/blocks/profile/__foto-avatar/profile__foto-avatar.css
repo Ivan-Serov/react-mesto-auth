@@ -1,0 +1,17 @@
+.profile__foto-avatar{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* .profile__foto-avatar{
+    box-sizing: border-box;
+    //background-image: url(../../../images/kusto.jpg;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    overflow: hidden;
+} */
