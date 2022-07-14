@@ -3,7 +3,6 @@ import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 import ImagePopup from './ImagePopup';
-////////////////
 import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import AddPopup from "./AddPopup";
@@ -11,7 +10,6 @@ import DeletePopup from "./DeletePopup";
 import { Route, Routes, useNavigate, useLocation } from 'react-router-dom';
 import {api}  from '../utils/Api'
 import { CurrentUserContext } from "../contexts/CurrentUserContext.js";
-///////1/////////
 import Register from '../components/Register';
 import Login from '../components/Login';
 import RequireAuth from './ProtectedRoute';
@@ -94,7 +92,6 @@ function App() {
         })
         .catch((err) => {
           console.log(err);
-
           return [];
         });
     } else {
@@ -105,7 +102,6 @@ function App() {
         })
         .catch((err) => {
           console.log(err);
-
           return [];
         });
     }
