@@ -6,7 +6,6 @@ export default function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-
     onUpdateAvatar({
       avatar: avatarRef.current.value,
     });
@@ -15,23 +14,23 @@ export default function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
 
   return (
     <PopupWithForm 
-        isOpen={isOpen}
-        onClose={onClose}
-        onSubmit={handleSubmit}
-        title="Обновить аватар"
-        name= "avatar"
-        buttonText="Сохранить"
-  >
-        <input 
-            name="avatar" 
-            id="link-avatar" 
-            type="url" 
-            placeholder="Ссылка на картинку" 
-            className="popup__input popup__input_type_image-link" 
-            required 
-            ref={avatarRef}
-            />
-        <span id="link-avatar-error" className="error"></span>
+      isOpen={isOpen}
+      onClose={onClose}
+      onSubmit={handleSubmit}
+      title="Обновить аватар"
+      name= "avatar"
+      buttonText="Сохранить"
+    >
+      <input 
+        name="avatar" 
+        id="link-avatar" 
+        type="url" 
+        placeholder="Ссылка на картинку" 
+        className="popup__input popup__input_type_image-link" 
+        required 
+        ref={avatarRef}
+      />
+      <span id="link-avatar-error" className="error"></span>
 
   </PopupWithForm>
   );

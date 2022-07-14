@@ -14,13 +14,12 @@ export default function DeletePostPopup({
 
   return (
     <PopupWithForm 
-        
-        isOpen={isOpen}
-        onClose={onClose}
-        onSubmit={handleSubmit}
-        title="Вы уверены?"
-        name= "delete"
-        buttonText="Да"
+      isOpen={isOpen}
+      onClose={onClose}
+      onSubmit={handleSubmit}
+      title="Вы уверены?"
+      name= "delete"
+      buttonText="Да"
     />
   );
 }

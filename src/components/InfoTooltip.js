@@ -2,32 +2,18 @@ import React from 'react';
 import success_icon from '../images/success-icon.svg';
 import fail_icon from '../images/fail-icon.svg';
 
+export default function InfoTooltip({ isOpen, onClose, isSucceed}) {
+  const sectionClassName = `popup popup_login ${isOpen && "popup_opened"}`;
 
-export default function InfoTooltip(props) {
-
-    if (props.errorLogin) { 
-      return (
-        <section className="popup popup_login popup_opened" >
-        <div className="popup__content" >
-          <button className="popup__close_login"  type="button" onClick={props.onClosePopup}></button>
-          <img src={success_icon}  alt='Ok' className="popup__icon" /> 
-          <h3 className="popup__title popup__title_login">Вы успешно зарегистрировались!</h3> 
-        </div>
-        </section>
-      );
-     } else if (!props.errorLogin) {
-        return (
-          <section className="popup popup_login popup_opened" >
-          <div className="popup__content" >
-            <button className="popup__close_login"  type="button" onClick={props.onClosePopup}></button>
-            <img src={fail_icon} alt='error' className="popup__icon" /> 
-            <h3 className="popup__title popup__title_login">Что-то пошло не так! Попробуйте еще раз</h3> 
-          </div>
-          </section>
-        );
-    } else {
-        return (
-          <section className="popup popup_login"></section>
-        );
-    }
+  return (
+    <section className={sectionClassName} >
+      <div className="popup__content" >
+        <button className="popup__close_login"  type="button" onClick={onClose}></button>
+        <img src={isSucceed ? success_icon : fail_icon}  alt='Ok' className="popup__icon" /> 
+        <h3 className="popup__title popup__title_login">
+          {isSucceed ? 'Вы успешно зарегистрировались!' : 'Что-то пошло не так! Пропробуйте ещё раз.'}
+        </h3> 
+      </div>
+    </section>
+  );
 }
