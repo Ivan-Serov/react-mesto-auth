@@ -6,8 +6,6 @@
     background-image: url(../../../images/like.svg);
     background-size: cover;
     background-color: #FFFFFF;
-    
-    
 }
 .places__like:hover{
     opacity: 0.5;
@@ -15,5 +13,4 @@
 }
 .places__like:active{
     background: #000000;
-    
 }

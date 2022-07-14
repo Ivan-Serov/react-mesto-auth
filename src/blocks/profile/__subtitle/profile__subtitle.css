@@ -9,7 +9,6 @@
     white-space: nowrap;
     overflow: hidden;
     width: 282px;
-    
 }
 @media screen and ( min-width: 1280px ){
     .profile__subtitle{

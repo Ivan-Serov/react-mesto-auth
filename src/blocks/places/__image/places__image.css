@@ -1,8 +1,6 @@
 .places__image{
-    
     width: 282px;
     height: 282px;
-    
 }
 .places__image:hover{
     cursor: pointer;

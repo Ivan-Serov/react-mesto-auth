@@ -157,19 +157,6 @@ function App() {
 /////////////1/////////////
   useEffect(() => {
     handleTokenCheck(location.pathname);
-  // запрос в API за пользовательскими данными
-    Promise.all([ 
-      api.getUserInfo(),
-      api.getInitialCards()
-    ])
-    .then((res) => {
-      setCurrentUser(res[0]);
-      setCards(res[1])
-    })
-    .catch((err) => {
-      console.log(err);
-      return [];
-    })
   }, []);
 
   const handleTokenCheck = (path) => {
@@ -245,8 +232,6 @@ function App() {
                         navStatus={'Выйти'} 
                         emailUser={userEmail} 
                         onLogout={handleLogout} 
-
-
                         />
                         <Main 
                           onEditProfile={handleEditProfileClick}
@@ -256,7 +241,6 @@ function App() {
                           onCardLike={handleCardLike}
                           onCardDeleteClick={handleCardDeleteClick}
                           cards={cards}
-
                         />  
                         <Footer />
                       </div>
@@ -266,12 +250,8 @@ function App() {
               />  
               <Route path="/sign-up" element={<Register onRegister={handleRegister}/> } />
               <Route path="/sign-in" element={<Login onLogin={handleLogin}/>} />
-              
-                
             </> 
-            
           </Routes>
-      
           <InfoTooltip
             isOpen={isInfoTooltipOpen}
             onClose={closeAllPopups}

@@ -9,7 +9,6 @@
        url(fonts/Inter-Regular.woff) format("woff");
 }
 
-
 @font-face {
   font-family: 'Inter';
   font-style:  normal;
@@ -19,7 +18,6 @@
        url(fonts/Inter-Medium.woff) format("woff");
 }
 
-
 @font-face {
   font-family: 'Inter';
   font-style:  normal;
@@ -28,4 +26,3 @@
   src: url(fonts/Inter-Black.woff2) format("woff2"),
        url(fonts/Inter-Black.woff) format("woff");
 }
-

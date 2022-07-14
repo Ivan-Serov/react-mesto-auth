@@ -31,7 +31,6 @@ export default function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
         ref={avatarRef}
       />
       <span id="link-avatar-error" className="error"></span>
-
   </PopupWithForm>
   );
 }

@@ -7,7 +7,6 @@
     background-size: cover;
     background-color: #000000;
     align-self: center;
-    
 }
 .profile__edit:hover{
     opacity: 0.6;
@@ -19,5 +18,4 @@
         height: 24px;
         margin-top: 5px;
     }
-    
 }
