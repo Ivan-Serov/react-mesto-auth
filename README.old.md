@@ -1,2 +1,0 @@
-# mesto-react
-# I Serov
